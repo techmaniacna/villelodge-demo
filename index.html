@@ -2,249 +2,261 @@
  <head>
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <title>Villelodge Accommodation - Luderitz</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Accommodation at affordable rates. Fully equipped, clean and safe! Luderitz, Namibia">
-  <meta name="keywords" content="accommodation-in-luderitz-namibia, accommodation, self catering accommodation, affordable accommodation, guest house, lodge, Villelodge Accommodation, Luderitz, Namibia, My Town Lüderitz, Namibia">
   <link href="https://villelodgeaccommodation.com/resources/Buite_edited.JPG" rel="shortcut icon" type="image/x-icon">
-  <link href="https://villelodgeaccommodation.com/resources/Buite_edited.JPG" rel="icon" type="image/x-icon">
-  <style type="text/css" id="styleCSS">
+  
+  <style type="text/css">
+  /* Modern CSS Reset & Typography */
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+
   * {
         margin: 0;
         padding: 0;
+        box-sizing: border-box;
   }
 
   body {
-        background: #111827;
-        font: normal small Arial, Helvetica, sans-serif;
-        color: #FFFFFF;
+        background-color: #0F172A; /* Modern Dark Background */
+        font-family: 'Inter', Arial, sans-serif;
+        color: #F8FAFC;
+        line-height: 1.6;
   }
-
-  a img{border:none;}
 
   a {
-        color: #FFFFFF;
+        color: #F8FAFC;
+        text-decoration: none;
+        transition: all 0.2s ease;
   }
 
-  a:hover {
-        text-decoration: underline;
-  }
-
-  .boxed {
-        margin-bottom: 20px;
-        background: #1F2937;
-        border: 2px solid #374151;
-  }
-
-  .boxed .title {
-        height: 26px;
-        padding: 10px 0 0 10px;
-        border-bottom: 2px solid #374151;
-        font-size: 1em;
-        color: #F3F4F6;
-  }
-
-  .boxed .content {
-        padding: 20px 20px 40px 20px;
-  }
-
-  /* Logo */
+  /* Header & Logo */
   #logo {
-        max-width: 900px;
-        width: 100%;
+        max-width: 1000px;
         margin: 0 auto;
-        padding: 20px 0;
+        padding: 40px 20px 20px;
         text-align: center;
   }
 
-  #logo h1 {
-        font-size: 2.5em;
+  #logo h1 a {
+        font-size: 2.5rem;
+        font-weight: 700;
+        color: #38BDF8; /* Light Blue Accent */
+        letter-spacing: -1px;
   }
 
-  #logo a {
-        text-decoration: none;
-        font-weight: bold;
-        color: #FFFFFF;
-  }
-
-  /* Menu */
+  /* Navigation Menu */
   #menu {
-        max-width: 900px;
-        width: 100%;
-        margin: 0 auto 20px auto;
+        max-width: 1000px;
+        margin: 0 auto 40px auto;
+        padding: 0 20px;
   }
 
   #menu ul {
-        margin: 0;
         list-style: none;
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
-        gap: 10px;
-  }
-
-  #menu li {
-        display: inline;
+        gap: 12px;
   }
 
   #menu a {
         display: block;
-        padding: 8px 12px;
-        text-decoration: none;
-        font-size: .9em;
-        font-weight: bold;
-        background: #1F2937;
-        border-radius: 4px;
-        border: 1px solid #374151;
+        padding: 10px 16px;
+        font-size: 0.9rem;
+        font-weight: 600;
+        background: #1E293B;
+        border-radius: 8px;
+        border: 1px solid #334155;
   }
 
-  #menu a:hover {
-        background: #2563EB;
-        border-color: #2563EB;
+  #menu a:hover, #menu .selected a {
+        background: #38BDF8;
+        border-color: #38BDF8;
+        color: #0F172A;
   }
 
-  /* Content */
+  /* Main Content Layout */
   #content {
-        max-width: 900px;
-        width: 100%;
+        max-width: 1000px;
         margin: 0 auto;
-        padding: 10px;
+        padding: 0 20px;
   }
 
-  #main {
-        width: 100%;
-  }
-
-  .sys_footer {
-        clear: both;
-        max-width: 900px;
-        margin: 0 auto;
-        padding: 10px 0;
-        border-top: 1px dotted #FFFFFF;
-        text-align: center;
-  }
-  </style>
-  <style type="text/css" id="styleOverrides">
-  .content p, #content p, .HTML_Default p, .Text_Default p, .sys_txt p, .sys_txt a, .sys_layout p, .sys_txt, .sys_layout  {
-    font-family: Arial, sans-serif;
-    font-size: 16px;
-    color: #FFFFFF;
-    line-height: 1.5;
-  }
-
-  /* Layout Columns */
   .layout_row {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    gap: 10px;
-    margin-bottom: 20px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        margin-bottom: 30px;
   }
 
   .zone_left, .zone_center, .zone_right {
-    flex: 1;
-    min-width: 250px;
-    text-align: center;
+        flex: 1;
+        min-width: 280px;
   }
 
-  .zone_left img, .zone_center img, .zone_right img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 6px;
+  /* Image Styling */
+  .Image_Default img {
+        width: 100%;
+        height: 220px;
+        object-fit: cover;
+        border-radius: 12px;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+        margin-bottom: 20px;
+  }
+
+  #I4955b66dace048c484befd00a513a31b_img, 
+  #I4a9e77acff004bb4ac5bffeb00e13a42_img {
+        height: auto;
+        max-height: 400px;
+  }
+
+  /* Text & Content Sections */
+  .sys_txt {
+        background: #1E293B;
+        padding: 30px;
+        border-radius: 12px;
+        border: 1px solid #334155;
+        margin-bottom: 30px;
+  }
+
+  .sys_txt p {
+        margin-bottom: 15px;
+        font-size: 1.05rem;
+        color: #CBD5E1;
+  }
+
+  .sys_txt i {
+        font-style: italic;
+        color: #94A3B8;
+  }
+
+  /* Call to Action Button */
+  .sys_button {
+        text-align: center;
+        margin: 40px 0;
   }
 
   .sys_button a {
-    display: inline-block;
-    background-color: #2563EB;
-    color: #ffffff !important;
-    padding: 12px 24px;
-    font-size: 18px;
-    font-weight: bold;
-    text-decoration: none;
-    border-radius: 6px;
-    margin: 15px 0;
+        display: inline-block;
+        background-color: #D97706; /* Warm Booking Accent */
+        color: #ffffff;
+        padding: 16px 32px;
+        font-size: 1.1rem;
+        font-weight: 700;
+        border-radius: 50px;
+        box-shadow: 0 4px 15px rgba(217, 119, 6, 0.3);
   }
 
   .sys_button a:hover {
-    background-color: #1D4ED8;
+        background-color: #B45309;
+        transform: translateY(-2px);
+  }
+
+  /* Footer */
+  .sys_footer {
+        max-width: 1000px;
+        margin: 40px auto 20px;
+        padding: 20px;
+        text-align: center;
+        border-top: 1px solid #334155;
+        font-size: 0.85rem;
+        color: #64748B;
+  }
+
+  /* Pet Policy Badge */
+  #I12afc3da05214526ac457fbeac36590b_sys_txt {
+        background: rgba(239, 68, 68, 0.1);
+        border: 1px solid rgba(239, 68, 68, 0.3);
+        text-align: center;
+        padding: 15px;
+  }
+
+  #I12afc3da05214526ac457fbeac36590b_sys_txt b {
+        color: #EF4444;
+        letter-spacing: 1px;
   }
   </style>
  </head>
+ 
  <body id="sys_background">
   <div id="logo">
-   <h1><a id="sys_heading" href="https://villelodgeaccommodation.com/" name="sys_heading">Villelodge Accommodation</a></h1>
+   <h1><a id="sys_heading" href="./">Villelodge Accommodation</a></h1>
   </div>
+  
   <div id="menu">
    <ul class="sys_navigation">
-    <li id="ys_menu_0" class="selected first"><a href="https://villelodgeaccommodation.com/" title="Home">HOME</a></li>
-    <li id="ys_menu_1"><a href="https://villelodgeaccommodation.com/family-unit.php" title="FAMILY UNIT">FAMILY UNIT</a></li>
-    <li id="ys_menu_2"><a href="https://villelodgeaccommodation.com/standard-room.php" title="STANDARD ROOM">STANDARD ROOM</a></li>
-    <li id="ys_menu_3"><a href="https://villelodgeaccommodation.com/budget-accommodation.php" title="BUDGET ACCOMMODATION">BUDGET ACCOMMODATION</a></li>
-    <li id="ys_menu_4"><a href="https://villelodgeaccommodation.com/gallery.php" title="GALLERY">GALLERY</a></li>
-    <li id="ys_menu_5"><a href="https://villelodgeaccommodation.com/availability-and-bookings.php" title="AVAILABILITY AND BOOKINGS">AVAILABILITY AND BOOKINGS</a></li>
-    <li id="ys_menu_7"><a href="https://villelodgeaccommodation.com/awards-and-comments.php" title="AWARDS AND COMMENTS">AWARDS AND COMMENTS</a></li>
-    <li id="ys_menu_8"><a href="https://villelodgeaccommodation.com/tourist-attractions.php" title="TOURIST ATTRACTIONS">TOURIST ATTRACTIONS</a></li>
-    <li id="ys_menu_9"><a href="https://villelodgeaccommodation.com/what-every-visitor-should-know.php" title="What every visitor should know">WHAT EVERY VISITOR SHOULD KNOW</a></li>
-    <li id="ys_menu_10" class="last"><a href="https://villelodgeaccommodation.com/rates.php" title="RATES">RATES</a></li>
+    <li class="selected"><a href="./" title="Home">HOME</a></li>
+    <li><a href="family-unit.php" title="FAMILY UNIT">FAMILY UNIT</a></li>
+    <li><a href="standard-room.php" title="STANDARD ROOM">STANDARD ROOM</a></li>
+    <li><a href="budget-accommodation.php" title="BUDGET ACCOMMODATION">BUDGET ACCOMMODATION</a></li>
+    <li><a href="gallery.php" title="GALLERY">GALLERY</a></li>
+    <li><a href="availability-and-bookings.php" title="AVAILABILITY AND BOOKINGS">AVAILABILITY AND BOOKINGS</a></li>
+    <li><a href="awards-and-comments.php" title="AWARDS AND COMMENTS">AWARDS AND COMMENTS</a></li>
+    <li><a href="tourist-attractions.php" title="TOURIST ATTRACTIONS">TOURIST ATTRACTIONS</a></li>
+    <li><a href="what-every-visitor-should-know.php" title="What every visitor should know">VISITOR INFO</a></li>
+    <li><a href="rates.php" title="RATES">RATES</a></li>
    </ul>
   </div>
+
   <div id="content">
    <div id="main">
     <div class="layout_3-over-1 sys_layout">
+     
      <div class="layout_row">
       <div class="zone_left">
-       <div id="sys_region_2">
-        <div id="I11" class="Image_Default">
-         <img id="I11_img" src="https://villelodgeaccommodation.com/resources/Sedina%20103.jpg.opt211x142o0%2C0s211x142.jpg" name="I11_img">
+        <div class="Image_Default">
+         <img src="https://villelodgeaccommodation.com/resources/Sedina%20103.jpg.opt211x142o0%2C0s211x142.jpg" alt="Room View">
         </div>
-       </div>
       </div>
       <div class="zone_center">
-       <div id="sys_region_3">
-        <div id="I99" class="Image_Default">
-         <img id="I99_img" src="https://villelodgeaccommodation.com/resources/Penguin.jpg.opt214x143o0%2C0s214x143.jpg" name="I99_img">
+        <div class="Image_Default">
+         <img src="https://villelodgeaccommodation.com/resources/Penguin.jpg.opt214x143o0%2C0s214x143.jpg" alt="Local Penguin">
         </div>
-       </div>
       </div>
       <div class="zone_right">
-       <div id="sys_region_4">
-        <div id="I12" class="Image_Default">
-         <img id="I12_img" src="https://villelodgeaccommodation.com/resources/Sedina%20012.jpg.opt215x144o0%2C0s215x144.jpg" name="I12_img">
+        <div class="Image_Default">
+         <img src="https://villelodgeaccommodation.com/resources/Sedina%20012.jpg.opt215x144o0%2C0s215x144.jpg" alt="Accommodation View">
         </div>
-       </div>
       </div>
      </div>
+
      <div class="zone_bottom">
-      <div id="sys_region_1">
-       <div id="I9b57897f6f0b4d4db634e40f1d62f7bf" class="Button_Default">
-        <div id="I9b57897f6f0b4d4db634e40f1d62f7bf_sys_button" class="I9b57897f6f0b4d4db634e40f1d62f7bf_sys_button sys_button large rounded solid">
-         <a href="https://hotelwall.com/?src=villelodgeaccommodation.com" target="_blank">Book Now</a>
+       <div class="sys_button">
+         <a href="https://hotelwall.com/?src=villelodgeaccommodation.com" target="_blank">Check Availability & Book Now</a>
+       </div>
+       
+       <div class="Image_Default" style="text-align:center;">
+        <img id="I4955b66dace048c484befd00a513a31b_img" src="https://villelodgeaccommodation.com/resources/Digital-Award-TRA-2023.png.opt660x660o0%2C0s660x660.png" alt="Award">
+       </div>
+       
+       <div class="Image_Default" style="text-align:center;">
+        <img id="I4a9e77acff004bb4ac5bffeb00e13a42_img" src="https://villelodgeaccommodation.com/resources/DSC_0100.JPG.opt660x438o0%2C0s660x438.JPG" alt="Main View">
+       </div>
+       
+       <div class="Text_Default">
+        <div class="sys_txt">
+         <p><i>"Located behind an unassuming exterior lies a hidden gem..." — Guest Review</i></p>
+         <br>
+         <p><b>Villelodge Accommodation</b> offers clean, peaceful and very affordable self catering rooms. The owner, Margaret de Villiers, gives personal attention to visitors and goes above and beyond to make guests feel at home.</p>
+         <br>
+         <p><b>Our main objective:</b><br>
+         We are Christians that value Biblical standards and aim to uphold morality in an environment where guests can relax, while creating pleasant memories and enjoying their down-time.</p>
         </div>
        </div>
-       <div id="I4955b66dace048c484befd00a513a31b" style="text-align:center;" class="Image_Default">
-        <img id="I4955b66dace048c484befd00a513a31b_img" src="https://villelodgeaccommodation.com/resources/Digital-Award-TRA-2023.png.opt660x660o0%2C0s660x660.png" name="I4955b66dace048c484befd00a513a31b_img">
-       </div>
-       <div id="I4a9e77acff004bb4ac5bffeb00e13a42" style="text-align:center;" class="Image_Default">
-        <img id="I4a9e77acff004bb4ac5bffeb00e13a42_img" src="https://villelodgeaccommodation.com/resources/DSC_0100.JPG.opt660x438o0%2C0s660x438.JPG" name="I4a9e77acff004bb4ac5bffeb00e13a42_img">
-       </div>
-       <div id="I19" class="Text_Default">
-        <div id="I19_sys_txt" class="sys_txt old_text_widget clear_fix">
-         <p style="margin: 15px 0;"><i><font size="5" color="#E5E7EB">"Located behind an unassuming exterior lies a hidden gem..." Guest Review</font></i></p>
-         <p style="margin: 15px 0;"><i><font size="4"><b>Villelodge Accommodation</b> offers clean, peaceful and very affordable self catering rooms. The owner, Margaret de Villiers, gives personal attention to visitors and goes above and beyond to make guests feel at home.</font></i></p>
-         <p style="margin: 15px 0;"><b>Our main objective:</b><br>
-         <i>We are Christians that value Biblical standards and aim to uphold morality in an environment where guests can relax, while creating pleasant memories and enjoying their down-time.</i></p>
+       
+       <div class="Text_Default">
+        <div id="I12afc3da05214526ac457fbeac36590b_sys_txt" class="sys_txt">
+         <p><b>NO PETS ALLOWED</b></p>
         </div>
        </div>
-       <div id="I12afc3da05214526ac457fbeac36590b" class="Text_Default">
-        <div id="I12afc3da05214526ac457fbeac36590b_sys_txt" class="sys_txt old_text_widget clear_fix">
-         <p style="text-align: center; margin-top: 20px; color: #EF4444;"><b><font size="4">NO PETS ALLOWED</font></b></p>
-        </div>
-       </div>
-      </div>
      </div>
+
     </div>
    </div>
   </div>
-  <div id="sys_footer" class="sys_footer">
-   <p>&copy; Villelodge Accommodation - Lüderitz, Namibia</p>
+
+  <div class="sys_footer">
+   <p>&copy; 2026 Villelodge Accommodation - Lüderitz, Namibia</p>
   </div>
  </body>
 </html>
