@@ -19,7 +19,6 @@
       padding-bottom: 3rem;
     }
 
-    /* Header Section */
     header {
       text-align: center;
       padding: 2.5rem 1rem 1.5rem 1rem;
@@ -43,7 +42,6 @@
       padding: 0 1.2rem;
     }
 
-    /* Main Image Banner */
     .hero-img {
       width: 100%;
       height: 250px;
@@ -54,7 +52,6 @@
       box-shadow: 0 8px 20px rgba(0,0,0,0.3);
     }
 
-    /* Action Buttons */
     .btn-whatsapp {
       display: block;
       width: 100%;
@@ -68,14 +65,8 @@
       font-size: 1.05rem;
       margin-bottom: 1.5rem;
       box-shadow: 0 4px 12px rgba(16, 185, 129, 0.4);
-      transition: transform 0.2s;
     }
 
-    .btn-whatsapp:active {
-      transform: scale(0.98);
-    }
-
-    /* Review Card */
     .quote-card {
       background-color: #1e3a8a;
       border-left: 4px solid #3b82f6;
@@ -92,7 +83,6 @@
       color: #f1f5f9;
     }
 
-    /* Objective Box */
     .objective-box {
       background-color: #11224d;
       padding: 1.2rem;
@@ -130,40 +120,39 @@
       color: #93c5fd;
     }
 
-    /* Interactive Navigation Grid */
+    /* 3x3 Grid Layout for Navigation Categories */
     .nav-grid {
       display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-columns: repeat(3, 1fr);
       gap: 0.8rem;
-      margin-bottom: 3rem;
+      margin-bottom: 2.5rem;
     }
 
     .grid-btn {
       background-color: #1e3a8a;
       border: 1px solid #2563eb;
       color: #ffffff;
-      padding: 1rem 0.5rem;
+      padding: 0.9rem 0.4rem;
       border-radius: 8px;
       text-decoration: none;
       text-align: center;
-      font-size: 0.85rem;
+      font-size: 0.8rem;
       font-weight: 600;
       display: flex;
       align-items: center;
       justify-content: center;
-      transition: background-color 0.2s;
+      min-height: 55px;
     }
 
     .grid-btn:hover, .grid-btn:active {
       background-color: #2563eb;
     }
 
-    /* Content Sections for Links */
     .content-section {
       background-color: #11224d;
       padding: 1.5rem;
       border-radius: 10px;
-      margin-top: 1.5rem;
+      margin-top: 1.2rem;
       scroll-margin-top: 20px;
     }
 
@@ -171,6 +160,15 @@
       font-size: 1.2rem;
       color: #60a5fa;
       margin-bottom: 0.8rem;
+    }
+
+    .content-section p, .content-section ul {
+      font-size: 0.9rem;
+      color: #cbd5e1;
+    }
+
+    .content-section ul {
+      margin-left: 1.2rem;
     }
 
     .gallery-grid {
@@ -192,7 +190,7 @@
 
   <header>
     <h1>Villelodge Accommodation</h1>
-    <p>Lüderitz, Namibia</p>
+    <p>111 Werft Street, Burenkamp, Lüderitz</p>
   </header>
 
   <div class="container">
@@ -217,51 +215,78 @@
       <div class="badge-no-pets">🐾 NO PETS ALLOWED</div>
     </div>
 
-    <h2 class="section-title">Explore Villelodge</h2>
+    <h2 class="section-title">Explore Categories</h2>
 
-    <!-- Clickable Grid Buttons -->
+    <!-- Complete Categories Grid -->
     <div class="nav-grid">
       <a href="#family" class="grid-btn">Family Unit</a>
       <a href="#standard" class="grid-btn">Standard Room</a>
-      <a href="#budget" class="grid-btn">Budget Room</a>
-      <a href="#tourist" class="grid-btn">Tourist Attractions</a>
-      <a href="#rates" class="grid-btn">Rates & Info</a>
+      <a href="#budget" class="grid-btn">Budget Accom.</a>
       <a href="#gallery" class="grid-btn">Gallery</a>
+      <a href="#bookings" class="grid-btn">Availability & Bookings</a>
+      <a href="#awards" class="grid-btn">Awards & Comments</a>
+      <a href="#tourist" class="grid-btn">Tourist Attractions</a>
+      <a href="#visitor-info" class="grid-btn">Visitor Info</a>
+      <a href="#rates" class="grid-btn">Rates</a>
     </div>
 
-    <!-- Targeted Content Sections -->
+    <!-- Sections for Each Category -->
     <div id="family" class="content-section">
       <h2>Family Unit</h2>
-      <p>Spacious accommodation suitable for families or small groups, fully equipped for self-catering comfort.</p>
+      <p>Self-catering unit equipped with full kitchen (sink, stove top, microwave, fridge, kettle, crockery), bedroom with twin beds, double bed in open-plan lounge, en-suite bathroom, satellite TV, and Wi-Fi.</p>
     </div>
 
     <div id="standard" class="content-section">
       <h2>Standard Room</h2>
-      <p>Cozy room setup with comfortable beds, en-suite bathroom facilities, and daily housekeeping.</p>
+      <p>Double room with choice of two single or kingsize bed, en-suite bathroom, satellite TV, fridge, microwave, kettle, fan, and access to shared communal kitchen.</p>
     </div>
 
     <div id="budget" class="content-section">
-      <h2>Budget Room</h2>
-      <p>Affordable, clean room for travelers looking for high value and comfort in Lüderitz.</p>
-    </div>
-
-    <div id="tourist" class="content-section">
-      <h2>Tourist Attractions</h2>
-      <p>Located close to Kolmanskop ghost town, Diaz Point, Agate Beach, and waterfront dining.</p>
-    </div>
-
-    <div id="rates" class="content-section">
-      <h2>Rates & Info</h2>
-      <p>Check-in: 14:00 | Check-out: 10:00<br>Contact us via WhatsApp for updated seasonal rates and availability.</p>
+      <h2>Budget Accommodation</h2>
+      <p>Overnight room with double bed, fold-down table, en-suite bathroom, coffee station, counter fridge, and satellite TV. Ideal for business travelers and campers.</p>
     </div>
 
     <div id="gallery" class="content-section">
       <h2>Gallery</h2>
-      <p>Take a peek inside our clean and comfortable premises.</p>
+      <p>Explore our clean, comfortable rooms and premises.</p>
       <div class="gallery-grid">
         <img src="https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=400&q=80" alt="Room 1">
         <img src="https://images.unsplash.com/photo-1566665797739-1674de7a421a?auto=format&fit=crop&w=400&q=80" alt="Room 2">
       </div>
+    </div>
+
+    <div id="bookings" class="content-section">
+      <h2>Availability & Bookings</h2>
+      <p>Check online availability or send a direct WhatsApp message to secure your booking instantly.</p>
+    </div>
+
+    <div id="awards" class="content-section">
+      <h2>Awards & Comments</h2>
+      <ul>
+        <li>Rated 8.9 / 10 - Fabulous</li>
+        <li>TripAdvisor #4 of 20 B&Bs in Lüderitz</li>
+        <li>SleepingOut Best Establishment Award Winner</li>
+      </ul>
+    </div>
+
+    <div id="tourist" class="content-section">
+      <h2>Tourist Attractions</h2>
+      <ul>
+        <li>Kolmanskop Ghost Town</li>
+        <li>Diaz Point & Lighthouse</li>
+        <li>Bogenfels Arch</li>
+        <li>Penguin Catamaran Tours</li>
+      </ul>
+    </div>
+
+    <div id="visitor-info" class="content-section">
+      <h2>What Every Visitor Should Know</h2>
+      <p>Important travel tips for Lüderitz: Fuel stations accept cash/card, shops close after 13:00 on weekends, and watch out for sand dunes driving in from Aux!</p>
+    </div>
+
+    <div id="rates" class="content-section">
+      <h2>Rates</h2>
+      <p>Affordable rates across Family, Standard, and Budget units. Contact us via WhatsApp for current seasonal pricing.</p>
     </div>
 
   </div>
