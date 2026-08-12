@@ -1,210 +1,270 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Villelodge Accommodation | Self-Catering Rooms Lüderitz</title>
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
-        
-        body { 
-            background-color: #1e3a8a; 
-            color: #ffffff; 
-            line-height: 1.6;
-            padding-bottom: 2rem;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Villelodge Accommodation</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    }
 
-        /* Header / Banner */
-        header {
-            background: linear-gradient(180deg, #0f172a 0%, #1e3a8a 100%);
-            text-align: center;
-            padding: 2.5rem 1rem 1.5rem 1rem;
-            position: relative;
-        }
-        header h1 {
-            font-size: 2.2rem;
-            font-weight: 700;
-            letter-spacing: 1px;
-            margin-bottom: 0.5rem;
-        }
-        header p {
-            color: #93c5fd;
-            font-style: italic;
-            font-size: 0.95rem;
-        }
+    body {
+      background-color: #0d2870;
+      color: #ffffff;
+      line-height: 1.6;
+      padding-bottom: 3rem;
+    }
 
-        /* Hero Image Container */
-        .hero {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 1rem;
-        }
-        .hero-img {
-            width: 100%;
-            border-radius: 12px;
-            border: 3px solid #60a5fa;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.4);
-            display: block;
-        }
+    /* Header Section */
+    header {
+      text-align: center;
+      padding: 2.5rem 1rem 1.5rem 1rem;
+    }
 
-        /* Main Content Box */
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 1rem;
-        }
+    header h1 {
+      font-size: 2rem;
+      font-weight: 800;
+      margin-bottom: 0.2rem;
+    }
 
-        .quote-box {
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(8px);
-            border-left: 4px solid #60a5fa;
-            padding: 1.2rem;
-            border-radius: 0 8px 8px 0;
-            margin: 1.5rem 0;
-            font-style: italic;
-            color: #e0f2fe;
-        }
+    header p {
+      color: #93c5fd;
+      font-style: italic;
+      font-size: 0.95rem;
+    }
 
-        .about-text {
-            font-size: 1.05rem;
-            margin-bottom: 1.5rem;
-            color: #f0f9ff;
-        }
+    .container {
+      max-width: 500px;
+      margin: 0 auto;
+      padding: 0 1.2rem;
+    }
 
-        .objective-card {
-            background: rgba(15, 23, 42, 0.6);
-            border: 1px solid rgba(255, 255, 255, 0.15);
-            padding: 1.5rem;
-            border-radius: 12px;
-            margin-bottom: 2rem;
-        }
-        .objective-card h3 {
-            color: #93c5fd;
-            margin-bottom: 0.5rem;
-            font-size: 1.1rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
+    /* Main Image Banner */
+    .hero-img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+      border-radius: 12px;
+      border: 2px solid #3b82f6;
+      margin-bottom: 1.5rem;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+    }
 
-        /* Badges */
-        .badge-no-pets {
-            display: inline-block;
-            background: #ef4444;
-            color: white;
-            font-weight: 700;
-            padding: 6px 16px;
-            border-radius: 20px;
-            font-size: 0.85rem;
-            letter-spacing: 1px;
-            margin-bottom: 2rem;
-            text-transform: uppercase;
-        }
+    /* Action Buttons */
+    .btn-whatsapp {
+      display: block;
+      width: 100%;
+      background-color: #10b981;
+      color: #ffffff;
+      text-align: center;
+      padding: 0.9rem;
+      border-radius: 25px;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 1.05rem;
+      margin-bottom: 1.5rem;
+      box-shadow: 0 4px 12px rgba(16, 185, 129, 0.4);
+      transition: transform 0.2s;
+    }
 
-        /* Action Buttons */
-        .btn-container {
-            display: flex;
-            flex-direction: column;
-            gap: 1rem;
-            margin-bottom: 2rem;
-        }
-        .btn-book {
-            display: block;
-            text-align: center;
-            background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
-            color: white;
-            text-decoration: none;
-            font-weight: 700;
-            font-size: 1.1rem;
-            padding: 1rem;
-            border-radius: 30px;
-            box-shadow: 0 6px 18px rgba(37, 211, 102, 0.3);
-            transition: transform 0.2s;
-        }
-        .btn-book:hover {
-            transform: scale(1.02);
-        }
+    .btn-whatsapp:active {
+      transform: scale(0.98);
+    }
 
-        /* Navigation Links Grid */
-        .nav-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-            gap: 0.8rem;
-            margin-top: 1rem;
-        }
-        .nav-card {
-            background: rgba(255, 255, 255, 0.08);
-            padding: 0.8rem;
-            text-align: center;
-            border-radius: 8px;
-            color: #93c5fd;
-            text-decoration: none;
-            font-size: 0.9rem;
-            font-weight: 600;
-            border: 1px solid rgba(255,255,255,0.05);
-        }
+    /* Review Card */
+    .quote-card {
+      background-color: #1e3a8a;
+      border-left: 4px solid #3b82f6;
+      padding: 1rem 1.2rem;
+      border-radius: 8px;
+      margin-bottom: 1.5rem;
+      font-style: italic;
+      color: #e0e7ff;
+    }
 
-        footer {
-            text-align: center;
-            padding: 2rem 1rem 0 1rem;
-            font-size: 0.85rem;
-            color: #93c5fd;
-            border-top: 1px solid rgba(255,255,255,0.1);
-            margin-top: 2rem;
-        }
-    </style>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    .about-text {
+      margin-bottom: 1.5rem;
+      font-size: 0.95rem;
+      color: #f1f5f9;
+    }
+
+    /* Objective Box */
+    .objective-box {
+      background-color: #11224d;
+      padding: 1.2rem;
+      border-radius: 10px;
+      margin-bottom: 1.5rem;
+    }
+
+    .objective-box h3 {
+      color: #60a5fa;
+      font-size: 0.9rem;
+      letter-spacing: 1px;
+      margin-bottom: 0.5rem;
+    }
+
+    .badge-no-pets {
+      display: inline-block;
+      background-color: #ef4444;
+      color: white;
+      padding: 0.4rem 1.2rem;
+      border-radius: 20px;
+      font-size: 0.8rem;
+      font-weight: 700;
+      margin: 0 auto 2rem auto;
+      text-align: center;
+    }
+
+    .center-wrapper {
+      text-align: center;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 1.3rem;
+      margin-bottom: 1.2rem;
+      color: #93c5fd;
+    }
+
+    /* Interactive Navigation Grid */
+    .nav-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 0.8rem;
+      margin-bottom: 3rem;
+    }
+
+    .grid-btn {
+      background-color: #1e3a8a;
+      border: 1px solid #2563eb;
+      color: #ffffff;
+      padding: 1rem 0.5rem;
+      border-radius: 8px;
+      text-decoration: none;
+      text-align: center;
+      font-size: 0.85rem;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background-color 0.2s;
+    }
+
+    .grid-btn:hover, .grid-btn:active {
+      background-color: #2563eb;
+    }
+
+    /* Content Sections for Links */
+    .content-section {
+      background-color: #11224d;
+      padding: 1.5rem;
+      border-radius: 10px;
+      margin-top: 1.5rem;
+      scroll-margin-top: 20px;
+    }
+
+    .content-section h2 {
+      font-size: 1.2rem;
+      color: #60a5fa;
+      margin-bottom: 0.8rem;
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.5rem;
+      margin-top: 1rem;
+    }
+
+    .gallery-grid img {
+      width: 100%;
+      height: 100px;
+      object-fit: cover;
+      border-radius: 6px;
+    }
+  </style>
 </head>
 <body>
 
-    <header>
-        <h1>Villelodge Accommodation</h1>
-        <p>Lüderitz, Namibia</p>
-    </header>
+  <header>
+    <h1>Villelodge Accommodation</h1>
+    <p>Lüderitz, Namibia</p>
+  </header>
 
-    <div class="hero">
-        <img src="https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=800&q=80" alt="Villelodge Accommodation Room" class="hero-img">
+  <div class="container">
+    <img src="https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=800&q=80" alt="Villelodge Room" class="hero-img">
+
+    <a href="https://wa.me/264810000000?text=Hi%20Margaret,%20I%20would%20like%20to%20inquire%20about%20booking%20a%20room%20at%20Villelodge." class="btn-whatsapp">💬 Book Now via WhatsApp</a>
+
+    <div class="quote-card">
+      "Located behind an unassuming exterior lies a hidden gem..." — Guest Review
     </div>
 
-    <div class="container">
-
-        <div class="btn-container">
-            <a href="https://wa.me/264857721405?text=Hi%20Villelodge,%20I%20would%20like%20to%20inquire%20about%20room%20availability" class="btn-whatsapp btn-book" target="_blank">
-                💬 Book Now via WhatsApp
-            </a>
-        </div>
-
-        <div class="quote-box">
-            "Located behind an unassuming exterior lies a hidden gem..." — Guest Review
-        </div>
-
-        <p class="about-text">
-            <strong>Villelodge Accommodation</strong> offers clean, peaceful, and very affordable self-catering rooms. The owner, <strong>Margaret de Villiers</strong>, gives personal attention to visitors and goes above and beyond to make guests feel at home.
-        </p>
-
-        <div class="objective-card">
-            <h3>Our Main Objective</h3>
-            <p>We are Christians that value Biblical standards and aim to uphold morality in an environment where guests can relax, while creating pleasant memories and enjoying their down-time.</p>
-        </div>
-
-        <div style="text-align: center;">
-            <span class="badge-no-pets">🐾 No Pets Allowed</span>
-        </div>
-
-        <h3 style="color: #93c5fd; margin-bottom: 0.8rem; text-align: center;">Explore Villelodge</h3>
-        <div class="nav-grid">
-            <div class="nav-card">Family Unit</div>
-            <div class="nav-card">Standard Room</div>
-            <div class="nav-card">Budget Room</div>
-            <div class="nav-card">Tourist Attractions</div>
-            <div class="nav-card">Rates & Info</div>
-            <div class="nav-card">Gallery</div>
-        </div>
-
+    <div class="about-text">
+      <strong>Villelodge Accommodation</strong> offers clean, peaceful, and very affordable self-catering rooms. The owner, <strong>Margaret de Villiers</strong>, gives personal attention to visitors and goes above and beyond to make guests feel at home.
     </div>
 
-    <footer>
-        <p>&copy; Villelodge Accommodation • Redesigned by <strong>Tech Maniac</strong></p>
-    </footer>
+    <div class="objective-box">
+      <h3>OUR MAIN OBJECTIVE</h3>
+      <p>We are Christians that value Biblical standards and aim to uphold morality in an environment where guests can relax, while creating pleasant memories and enjoying their down-time.</p>
+    </div>
+
+    <div class="center-wrapper">
+      <div class="badge-no-pets">🐾 NO PETS ALLOWED</div>
+    </div>
+
+    <h2 class="section-title">Explore Villelodge</h2>
+
+    <!-- Clickable Grid Buttons -->
+    <div class="nav-grid">
+      <a href="#family" class="grid-btn">Family Unit</a>
+      <a href="#standard" class="grid-btn">Standard Room</a>
+      <a href="#budget" class="grid-btn">Budget Room</a>
+      <a href="#tourist" class="grid-btn">Tourist Attractions</a>
+      <a href="#rates" class="grid-btn">Rates & Info</a>
+      <a href="#gallery" class="grid-btn">Gallery</a>
+    </div>
+
+    <!-- Targeted Content Sections -->
+    <div id="family" class="content-section">
+      <h2>Family Unit</h2>
+      <p>Spacious accommodation suitable for families or small groups, fully equipped for self-catering comfort.</p>
+    </div>
+
+    <div id="standard" class="content-section">
+      <h2>Standard Room</h2>
+      <p>Cozy room setup with comfortable beds, en-suite bathroom facilities, and daily housekeeping.</p>
+    </div>
+
+    <div id="budget" class="content-section">
+      <h2>Budget Room</h2>
+      <p>Affordable, clean room for travelers looking for high value and comfort in Lüderitz.</p>
+    </div>
+
+    <div id="tourist" class="content-section">
+      <h2>Tourist Attractions</h2>
+      <p>Located close to Kolmanskop ghost town, Diaz Point, Agate Beach, and waterfront dining.</p>
+    </div>
+
+    <div id="rates" class="content-section">
+      <h2>Rates & Info</h2>
+      <p>Check-in: 14:00 | Check-out: 10:00<br>Contact us via WhatsApp for updated seasonal rates and availability.</p>
+    </div>
+
+    <div id="gallery" class="content-section">
+      <h2>Gallery</h2>
+      <p>Take a peek inside our clean and comfortable premises.</p>
+      <div class="gallery-grid">
+        <img src="https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=400&q=80" alt="Room 1">
+        <img src="https://images.unsplash.com/photo-1566665797739-1674de7a421a?auto=format&fit=crop&w=400&q=80" alt="Room 2">
+      </div>
+    </div>
+
+  </div>
 
 </body>
 </html>
