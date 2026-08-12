@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Villelodge Accommodation | Self-Catering Rooms Lüderitz</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
+        
+        body { 
+            background-color: #1e3a8a; 
+            color: #ffffff; 
+            line-height: 1.6;
+            padding-bottom: 2rem;
+        }
+
+        /* Header / Banner */
+        header {
+            background: linear-gradient(180deg, #0f172a 0%, #1e3a8a 100%);
+            text-align: center;
+            padding: 2.5rem 1rem 1.5rem 1rem;
+            position: relative;
+        }
+        header h1 {
+            font-size: 2.2rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+            margin-bottom: 0.5rem;
+        }
+        header p {
+            color: #93c5fd;
+            font-style: italic;
+            font-size: 0.95rem;
+        }
+
+        /* Hero Image Container */
+        .hero {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 1rem;
+        }
+        .hero-img {
+            width: 100%;
+            border-radius: 12px;
+            border: 3px solid #60a5fa;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+            display: block;
+        }
+
+        /* Main Content Box */
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 1rem;
+        }
+
+        .quote-box {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(8px);
+            border-left: 4px solid #60a5fa;
+            padding: 1.2rem;
+            border-radius: 0 8px 8px 0;
+            margin: 1.5rem 0;
+            font-style: italic;
+            color: #e0f2fe;
+        }
+
+        .about-text {
+            font-size: 1.05rem;
+            margin-bottom: 1.5rem;
+            color: #f0f9ff;
+        }
+
+        .objective-card {
+            background: rgba(15, 23, 42, 0.6);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            padding: 1.5rem;
+            border-radius: 12px;
+            margin-bottom: 2rem;
+        }
+        .objective-card h3 {
+            color: #93c5fd;
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* Badges */
+        .badge-no-pets {
+            display: inline-block;
+            background: #ef4444;
+            color: white;
+            font-weight: 700;
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            letter-spacing: 1px;
+            margin-bottom: 2rem;
+            text-transform: uppercase;
+        }
+
+        /* Action Buttons */
+        .btn-container {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+        .btn-book {
+            display: block;
+            text-align: center;
+            background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+            color: white;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.1rem;
+            padding: 1rem;
+            border-radius: 30px;
+            box-shadow: 0 6px 18px rgba(37, 211, 102, 0.3);
+            transition: transform 0.2s;
+        }
+        .btn-book:hover {
+            transform: scale(1.02);
+        }
+
+        /* Navigation Links Grid */
+        .nav-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+            gap: 0.8rem;
+            margin-top: 1rem;
+        }
+        .nav-card {
+            background: rgba(255, 255, 255, 0.08);
+            padding: 0.8rem;
+            text-align: center;
+            border-radius: 8px;
+            color: #93c5fd;
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 600;
+            border: 1px solid rgba(255,255,255,0.05);
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem 1rem 0 1rem;
+            font-size: 0.85rem;
+            color: #93c5fd;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            margin-top: 2rem;
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <h1>Villelodge Accommodation</h1>
+        <p>Lüderitz, Namibia</p>
+    </header>
+
+    <div class="hero">
+        <img src="https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=800&q=80" alt="Villelodge Accommodation Room" class="hero-img">
+    </div>
+
+    <div class="container">
+
+        <div class="btn-container">
+            <a href="https://wa.me/264857721405?text=Hi%20Villelodge,%20I%20would%20like%20to%20inquire%20about%20room%20availability" class="btn-whatsapp btn-book" target="_blank">
+                💬 Book Now via WhatsApp
+            </a>
+        </div>
+
+        <div class="quote-box">
+            "Located behind an unassuming exterior lies a hidden gem..." — Guest Review
+        </div>
+
+        <p class="about-text">
+            <strong>Villelodge Accommodation</strong> offers clean, peaceful, and very affordable self-catering rooms. The owner, <strong>Margaret de Villiers</strong>, gives personal attention to visitors and goes above and beyond to make guests feel at home.
+        </p>
+
+        <div class="objective-card">
+            <h3>Our Main Objective</h3>
+            <p>We are Christians that value Biblical standards and aim to uphold morality in an environment where guests can relax, while creating pleasant memories and enjoying their down-time.</p>
+        </div>
+
+        <div style="text-align: center;">
+            <span class="badge-no-pets">🐾 No Pets Allowed</span>
+        </div>
+
+        <h3 style="color: #93c5fd; margin-bottom: 0.8rem; text-align: center;">Explore Villelodge</h3>
+        <div class="nav-grid">
+            <div class="nav-card">Family Unit</div>
+            <div class="nav-card">Standard Room</div>
+            <div class="nav-card">Budget Room</div>
+            <div class="nav-card">Tourist Attractions</div>
+            <div class="nav-card">Rates & Info</div>
+            <div class="nav-card">Gallery</div>
+        </div>
+
+    </div>
+
+    <footer>
+        <p>&copy; Villelodge Accommodation • Redesigned by <strong>Tech Maniac</strong></p>
+    </footer>
+
+</body>
+</html>
