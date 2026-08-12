@@ -3,157 +3,159 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Villelodge Accommodation</title>
+  <title>Villelodge Accommodation | Lüderitz, Namibia</title>
   <style>
+    :root {
+      --bg-main: #0a1118;
+      --bg-card: #121e2a;
+      --bg-nav: #080d13;
+      --accent-gold: #d4af37;
+      --accent-blue: #2563eb;
+      --text-main: #f1f5f9;
+      --text-muted: #94a3b8;
+      --border-color: #1e2d3d;
+    }
+
     * {
       box-sizing: border-box;
       margin: 0;
       padding: 0;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
     }
 
     body {
-      background-color: #0b1a30;
-      color: #f8fafc;
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      padding-bottom: 2rem;
+      background-color: var(--bg-main);
+      color: var(--text-main);
+      line-height: 1.6;
+      padding-bottom: 3rem;
     }
 
-    /* Top Brand Header */
+    /* Header */
     header {
-      width: 100%;
-      background-color: #071120;
-      padding: 1.5rem 1rem;
+      background-color: var(--bg-nav);
       text-align: center;
-      border-bottom: 1px solid #1e293b;
+      padding: 2rem 1rem 1.5rem;
+      border-bottom: 2px solid var(--accent-gold);
     }
 
     header h1 {
-      font-size: 1.8rem;
-      font-weight: 800;
-      letter-spacing: -0.5px;
+      font-size: 2.2rem;
       color: #ffffff;
+      letter-spacing: 1px;
+      font-weight: 800;
     }
 
     header p {
-      font-size: 0.85rem;
-      color: #94a3b8;
-      margin-top: 0.2rem;
+      color: var(--accent-gold);
+      font-size: 0.95rem;
+      margin-top: 0.3rem;
     }
 
-    /* Dynamic Category Navigation Bar */
-    .nav-container {
-      width: 100%;
-      max-width: 800px;
-      padding: 1rem 0.8rem;
+    /* Navigation Bar */
+    .nav-wrapper {
       position: sticky;
       top: 0;
-      background-color: #0b1a30;
-      z-index: 100;
+      background-color: var(--bg-nav);
+      z-index: 1000;
+      border-bottom: 1px solid var(--border-color);
+      padding: 0.75rem 0;
     }
 
-    .nav-scroll {
+    .nav-container {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
       gap: 0.5rem;
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0 0.5rem;
     }
 
-    .nav-btn {
-      background-color: #1e293b;
-      color: #94a3b8;
-      border: 1px solid #334155;
-      padding: 0.55rem 0.85rem;
-      border-radius: 8px;
-      font-size: 0.78rem;
-      font-weight: 600;
-      cursor: pointer;
-      transition: all 0.2s ease;
+    .nav-tab {
+      background-color: var(--bg-card);
+      color: var(--text-muted);
+      border: 1px solid var(--border-color);
+      padding: 0.6rem 1rem;
+      border-radius: 6px;
+      font-size: 0.8rem;
+      font-weight: 700;
       text-transform: uppercase;
-      letter-spacing: 0.3px;
+      cursor: pointer;
+      transition: all 0.25s ease;
     }
 
-    .nav-btn:hover {
+    .nav-tab:hover {
       color: #ffffff;
-      border-color: #3b82f6;
+      border-color: var(--accent-gold);
     }
 
-    .nav-btn.active {
-      background-color: #2563eb;
-      color: #ffffff;
-      border-color: #3b82f6;
-      box-shadow: 0 4px 12px rgba(37, 99, 235, 0.35);
+    .nav-tab.active {
+      background-color: var(--accent-gold);
+      color: #000000;
+      border-color: var(--accent-gold);
+      box-shadow: 0 0 12px rgba(212, 175, 55, 0.4);
     }
 
-    /* Main Display Container */
-    .app-card {
-      width: 92%;
-      max-width: 650px;
-      background-color: #0f172a;
-      border: 1px solid #1e293b;
-      border-radius: 16px;
-      padding: 1.5rem;
-      margin-top: 0.5rem;
-      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+    /* Container */
+    .main-container {
+      max-width: 750px;
+      margin: 1.5rem auto 0;
+      padding: 0 1rem;
     }
 
-    /* Tab Page Content View */
-    .tab-page {
-      display: none; /* Hide all pages by default */
-      animation: fadeIn 0.25s ease-in-out;
+    .tab-content {
+      display: none;
+      background-color: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      padding: 1.8rem;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+      animation: fadeIn 0.3s ease-in-out;
     }
 
-    .tab-page.active {
-      display: block; /* Show active page */
+    .tab-content.active {
+      display: block;
     }
 
     @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(4px); }
+      from { opacity: 0; transform: translateY(6px); }
       to { opacity: 1; transform: translateY(0); }
     }
 
-    /* Component Styling */
-    .page-title {
-      font-size: 1.4rem;
-      font-weight: 700;
-      color: #60a5fa;
+    /* Typography & Media */
+    .section-title {
+      font-size: 1.5rem;
+      color: var(--accent-gold);
       margin-bottom: 1rem;
-      border-bottom: 1px solid #1e293b;
       padding-bottom: 0.5rem;
+      border-bottom: 1px solid var(--border-color);
     }
 
-    .hero-img {
+    .media-frame {
       width: 100%;
-      height: 220px;
+      height: 240px;
       object-fit: cover;
-      border-radius: 10px;
-      margin-bottom: 1rem;
-      border: 1px solid #334155;
+      border-radius: 8px;
+      border: 1px solid var(--border-color);
+      margin-bottom: 1.2rem;
     }
 
     .btn-whatsapp {
-      display: block;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
       width: 100%;
-      background-color: #10b981;
+      background-color: #25d366;
       color: #ffffff;
       text-align: center;
-      padding: 0.85rem;
-      border-radius: 10px;
+      padding: 0.9rem;
+      border-radius: 8px;
       text-decoration: none;
       font-weight: 700;
-      font-size: 0.95rem;
+      font-size: 1rem;
       margin: 1.2rem 0;
-      box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
-    }
-
-    p {
-      font-size: 0.92rem;
-      line-height: 1.6;
-      color: #cbd5e1;
-      margin-bottom: 1rem;
+      box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
     }
 
     ul {
@@ -162,194 +164,189 @@
     }
 
     li {
-      font-size: 0.88rem;
-      color: #cbd5e1;
-      margin-bottom: 0.4rem;
-      line-height: 1.5;
+      margin-bottom: 0.5rem;
+      color: var(--text-main);
+      font-size: 0.92rem;
     }
 
-    .sub-head {
-      font-weight: 700;
-      color: #93c5fd;
-      margin-top: 1rem;
-      margin-bottom: 0.4rem;
-      display: block;
-    }
-
-    .gallery-grid {
+    /* Grid Displays */
+    .grid-2 {
       display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 0.8rem;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1rem;
       margin-top: 1rem;
     }
 
-    .gallery-grid img {
-      width: 100%;
-      height: 130px;
-      object-fit: cover;
+    .card-box {
+      background: var(--bg-main);
+      padding: 1.2rem;
       border-radius: 8px;
-      border: 1px solid #334155;
+      border: 1px solid var(--border-color);
+    }
+
+    .card-box h3 {
+      color: var(--accent-gold);
+      font-size: 1rem;
+      margin-bottom: 0.4rem;
+    }
+
+    .card-box p {
+      font-size: 0.88rem;
+      color: var(--text-muted);
     }
   </style>
 </head>
 <body>
 
   <header>
-    <h1>Villelodge Accommodation</h1>
-    <p>111 Werft Street, Burenkamp, Lüderitz, Namibia</p>
+    <h1>VILLELODGE ACCOMMODATION</h1>
+    <p>📍 111 Werft Street, Burenkamp, Lüderitz, Namibia</p>
   </header>
 
-  <!-- Category Nav Buttons -->
-  <div class="nav-container">
-    <div class="nav-scroll">
-      <button class="nav-btn active" onclick="switchTab('home', this)">Home</button>
-      <button class="nav-btn" onclick="switchTab('family', this)">Family Unit</button>
-      <button class="nav-btn" onclick="switchTab('standard', this)">Standard Room</button>
-      <button class="nav-btn" onclick="switchTab('budget', this)">Budget Room</button>
-      <button class="nav-btn" onclick="switchTab('gallery', this)">Gallery</button>
-      <button class="nav-btn" onclick="switchTab('bookings', this)">Bookings</button>
-      <button class="nav-btn" onclick="switchTab('awards', this)">Awards</button>
-      <button class="nav-btn" onclick="switchTab('tourist', this)">Attractions</button>
-      <button class="nav-btn" onclick="switchTab('visitor-info', this)">Visitor Info</button>
-      <button class="nav-btn" onclick="switchTab('rates', this)">Rates</button>
+  <div class="nav-wrapper">
+    <div class="nav-container">
+      <button class="nav-tab active" onclick="openTab('home', this)">Home</button>
+      <button class="nav-tab" onclick="openTab('family', this)">Family Unit</button>
+      <button class="nav-tab" onclick="openTab('standard', this)">Standard Room</button>
+      <button class="nav-tab" onclick="openTab('budget', this)">Budget Room</button>
+      <button class="nav-tab" onclick="openTab('gallery', this)">Gallery</button>
+      <button class="nav-tab" onclick="openTab('awards', this)">Awards</button>
+      <button class="nav-tab" onclick="openTab('attractions', this)">Attractions</button>
+      <button class="nav-tab" onclick="openTab('visitor', this)">Visitor Info</button>
+      <button class="nav-tab" onclick="openTab('rates', this)">Rates</button>
     </div>
   </div>
 
-  <div class="app-card">
+  <div class="main-container">
 
-    <!-- HOME PAGE -->
-    <div id="home" class="tab-page active">
-      <img src="https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=800&q=80" alt="Villelodge" class="hero-img">
-      <h2 class="page-title">Welcome to Villelodge</h2>
-      <p><em>"Located behind an unassuming exterior lies a hidden gem..."</em> — Guest Review</p>
-      <p>Villelodge Accommodation offers clean, peaceful, and very affordable self-catering rooms. The owner, Margaret de Villiers, gives personal attention to visitors and goes above and beyond to make guests feel at home.</p>
-      <a href="https://wa.me/264810000000?text=Hi%20Margaret,%20I%20would%20like%20to%20inquire%20about%20booking%20a%20room%20at%20Villelodge." class="btn-whatsapp">💬 Book Directly via WhatsApp</a>
+    <!-- HOME -->
+    <div id="home" class="tab-content active">
+      <h2 class="section-title">Welcome to Villelodge</h2>
+      <img src="https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=800&q=80" alt="Villelodge Exterior" class="media-frame">
+      <p style="font-style: italic; color: var(--accent-gold); margin-bottom: 1rem;">"Located behind an unassuming exterior lies a hidden gem..." — Guest Review</p>
+      <p>Villelodge Accommodation offers exceptionally clean, peaceful, and affordable self-catering accommodation in Lüderitz. Managed with direct personal attention by host Margaret de Villiers, every visitor receives exceptional care to make their stay comfortable and memorable.</p>
+      <a href="https://wa.me/264810000000?text=Hello%20Margaret,%20I%20would%20like%20to%20inquire%20about%20booking%20a%20stay." class="btn-whatsapp">💬 Book Instantly via WhatsApp</a>
     </div>
 
-    <!-- FAMILY UNIT PAGE -->
-    <div id="family" class="tab-page">
-      <h2 class="page-title">Family Unit</h2>
-      <p>A very comfortable and well-equipped unit ideal for family stays.</p>
+    <!-- FAMILY UNIT -->
+    <div id="family" class="tab-content">
+      <h2 class="section-title">Self-Catering Family Unit</h2>
+      <img src="https://images.unsplash.com/photo-1566665797739-1674de7a421a?auto=format&fit=crop&w=800&q=80" alt="Family Room" class="media-frame">
+      <p>A fully self-contained unit offering maximum comfort for families or small groups:</p>
       <ul>
-        <li>Fully self-catering kitchen: sink, stove top, microwave oven, fridge, kettle, cutlery, and crockery.</li>
-        <li>Bedroom with twin beds.</li>
-        <li>Double bed in the open-plan lounge / kitchen.</li>
-        <li>Ensuite Bathroom & Satellite TV.</li>
-        <li>Quality pillows, linen, towels, fan, hairdryer, and in-room safe.</li>
-        <li>Free Wi-Fi & Safe Parking.</li>
+        <li>Fully equipped kitchen (sink, stovetop, microwave, fridge, kettle, crockery).</li>
+        <li>Private bedroom with twin beds.</li>
+        <li>Open-plan lounge area equipped with a double bed.</li>
+        <li>En-suite bathroom, Satellite TV, and free high-speed Wi-Fi.</li>
+        <li>In-room safe, hairdryer, fan, premium linen, and secure parking.</li>
       </ul>
-      <a href="https://wa.me/264810000000?text=Inquiry%20about%20Family%20Unit" class="btn-whatsapp">Inquire About Family Unit</a>
+      <a href="https://wa.me/264810000000?text=Inquiry%20regarding%20Family%20Unit" class="btn-whatsapp">Book Family Unit</a>
     </div>
 
-    <!-- STANDARD ROOM PAGE -->
-    <div id="standard" class="tab-page">
-      <h2 class="page-title">Standard Room</h2>
-      <p>Comfortable Double Room offering a choice of two single beds or a kingsize bed.</p>
-      <span class="sub-head">In-Room Breakfast Corner:</span>
+    <!-- STANDARD ROOM -->
+    <div id="standard" class="tab-content">
+      <h2 class="section-title">Standard Double Room</h2>
+      <img src="https://images.unsplash.com/photo-1595526114035-0d45ed16cfbf?auto=format&fit=crop&w=800&q=80" alt="Standard Room" class="media-frame">
+      <p>Comfortable room configuration featuring either two single beds or a king-size bed setup.</p>
       <ul>
-        <li>Fridge & Microwave Oven</li>
-        <li>Toaster, Kettle, Cutlery & Crockery</li>
-        <li>DSTV (Hotel Bouquet) & Free Wi-Fi</li>
-        <li>Access to fully equipped communal kitchen shared by two rooms.</li>
+        <li>In-room breakfast corner (counter fridge, microwave, toaster, kettle, cutlery).</li>
+        <li>En-suite bathroom and Satellite TV (Hotel Bouquet).</li>
+        <li>Access to a fully equipped communal kitchen shared by only two rooms.</li>
+        <li>Free Wi-Fi, hairdryer, in-room safe, and fan.</li>
       </ul>
-      <a href="https://wa.me/264810000000?text=Inquiry%20about%20Standard%20Room" class="btn-whatsapp">Inquire About Standard Room</a>
+      <a href="https://wa.me/264810000000?text=Inquiry%20regarding%20Standard%20Room" class="btn-whatsapp">Book Standard Room</a>
     </div>
 
-    <!-- BUDGET ROOM PAGE -->
-    <div id="budget" class="tab-page">
-      <h2 class="page-title">Budget Accommodation</h2>
-      <p>Popular with business travelers and campers looking for low rates without sacrificing cleanliness and essential amenities.</p>
+    <!-- BUDGET ROOM -->
+    <div id="budget" class="tab-content">
+      <h2 class="section-title">Budget Accommodation</h2>
+      <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=800&q=80" alt="Budget Room" class="media-frame">
+      <p>An economical overnight room tailored for traveling professionals, campers, and solo travelers.</p>
       <ul>
-        <li>Double bed with fold-down table / desk.</li>
-        <li>En-suite bathroom, Satellite TV, and coffee station with counter fridge.</li>
-        <li>Communal kitchen located 15 meters from the door.</li>
-        <li>Quality linen, towels, and safe parking.</li>
+        <li>Double bed equipped with fold-down table/desk.</li>
+        <li>En-suite bathroom, counter fridge, coffee station, and Satellite TV.</li>
+        <li>Full communal kitchen situated 15 meters from the entrance.</li>
+        <li>Includes free Wi-Fi, quality towels, and secure gated parking.</li>
       </ul>
-      <a href="https://wa.me/264810000000?text=Inquiry%20about%20Budget%20Room" class="btn-whatsapp">Inquire About Budget Room</a>
+      <a href="https://wa.me/264810000000?text=Inquiry%20regarding%20Budget%20Room" class="btn-whatsapp">Book Budget Room</a>
     </div>
 
-    <!-- GALLERY PAGE -->
-    <div id="gallery" class="tab-page">
-      <h2 class="page-title">Photo Gallery</h2>
-      <p>Take a look around our clean, quiet premises:</p>
-      <div class="gallery-grid">
-        <img src="https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=400&q=80" alt="Room View">
-        <img src="https://images.unsplash.com/photo-1566665797739-1674de7a421a?auto=format&fit=crop&w=400&q=80" alt="Bedroom Setup">
-        <img src="https://images.unsplash.com/photo-1595526114035-0d45ed16cfbf?auto=format&fit=crop&w=400&q=80" alt="Comfortable Bed">
-        <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=400&q=80" alt="Clean Bathroom">
+    <!-- GALLERY -->
+    <div id="gallery" class="tab-content">
+      <h2 class="section-title">Property Gallery</h2>
+      <div class="grid-2">
+        <img src="https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=400&q=80" class="media-frame" style="height:150px; margin:0;" alt="Room 1">
+        <img src="https://images.unsplash.com/photo-1566665797739-1674de7a421a?auto=format&fit=crop&w=400&q=80" class="media-frame" style="height:150px; margin:0;" alt="Room 2">
+        <img src="https://images.unsplash.com/photo-1595526114035-0d45ed16cfbf?auto=format&fit=crop&w=400&q=80" class="media-frame" style="height:150px; margin:0;" alt="Room 3">
+        <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=400&q=80" class="media-frame" style="height:150px; margin:0;" alt="Room 4">
       </div>
     </div>
 
-    <!-- BOOKINGS PAGE -->
-    <div id="bookings" class="tab-page">
-      <h2 class="page-title">Availability & Bookings</h2>
-      <p>We process direct bookings through WhatsApp for instant response and personalized booking assistance.</p>
-      <a href="https://wa.me/264810000000?text=Hi%20Margaret,%20I%20would%20like%20to%20check%20room%20availability." class="btn-whatsapp">💬 Check Availability on WhatsApp</a>
+    <!-- AWARDS -->
+    <div id="awards" class="tab-content">
+      <h2 class="section-title">Awards & Verified Ratings</h2>
+      <div class="grid-2">
+        <div class="card-box">
+          <h3>TripAdvisor</h3>
+          <p><strong>#4 of 20 B&Bs in Lüderitz</strong></p>
+          <p>Rated 8.9 / 10 Fabulous based on verified guest reviews.</p>
+        </div>
+        <div class="card-box">
+          <h3>SleepingOut Awards</h3>
+          <p><strong>Best Establishment Winner</strong></p>
+          <p>Awarded Best Value for Money Accommodation in Lüderitz.</p>
+        </div>
+      </div>
     </div>
 
-    <!-- AWARDS PAGE -->
-    <div id="awards" class="tab-page">
-      <h2 class="page-title">Awards & Comments</h2>
-      <span class="sub-head">TripAdvisor Rankings:</span>
+    <!-- ATTRACTIONS -->
+    <div id="attractions" class="tab-content">
+      <h2 class="section-title">Explore Lüderitz</h2>
+      <div class="card-box" style="margin-bottom: 0.8rem;">
+        <h3>Kolmanskop Ghost Town</h3>
+        <p>Historic diamond mining ghost town. Guided tours run Monday to Saturday at 09:30 and 11:00.</p>
+      </div>
+      <div class="card-box" style="margin-bottom: 0.8rem;">
+        <h3>Diaz Point & Lighthouse</h3>
+        <p>Scenic peninsula coastline featuring the historic Diaz Cross and lighthouse cafe.</p>
+      </div>
+      <div class="card-box">
+        <h3>Bogenfels Arch</h3>
+        <p>Excursions into the Sperrgebiet diamond region to view the magnificent 55m rock arch.</p>
+      </div>
+    </div>
+
+    <!-- VISITOR INFO -->
+    <div id="visitor" class="tab-content">
+      <h2 class="section-title">Essential Visitor Information</h2>
       <ul>
-        <li>Ranked #4 of 20 B&Bs in Lüderitz</li>
-        <li>"You will be pleasantly surprised"</li>
-        <li>"Impeccable apartment with everything you need"</li>
-      </ul>
-      <span class="sub-head">SleepingOut Guest Awards:</span>
-      <ul>
-        <li>Best Establishment Award Winner</li>
-        <li>Best Value For Money Award Winner</li>
+        <li><strong>Service Stations:</strong> While card payments are accepted in town, carry cash for remote service stations.</li>
+        <li><strong>Currency:</strong> Both Namibian Dollars (NAD) and South African Rand (ZAR) are accepted everywhere at 1:1 value.</li>
+        <li><strong>Trading Hours:</strong> Most town shops close after 13:00 on Saturdays and remain closed on Sundays.</li>
+        <li><strong>Road Conditions:</strong> Watch out for drifting sand dunes across the roadway during the final 50km into Lüderitz.</li>
       </ul>
     </div>
 
-    <!-- TOURIST ATTRACTIONS PAGE -->
-    <div id="tourist" class="tab-page">
-      <h2 class="page-title">What To Do In Lüderitz</h2>
-      <span class="sub-head">Kolmanskop Ghost Town</span>
-      <p>Daily guided tours at 09H30 and 11H00 Mon - Sat.</p>
-      <span class="sub-head">Diaz Point & Lighthouse</span>
-      <p>A drive around the peninsula brings you to Diaz Cross and the Diaz Point Coffee Shop.</p>
-      <span class="sub-head">Bogenfels Arch</span>
-      <p>Excursions into the forbidden territory (Sperrgebiet).</p>
-    </div>
-
-    <!-- VISITOR INFO PAGE -->
-    <div id="visitor-info" class="tab-page">
-      <h2 class="page-title">What Every Visitor Should Know</h2>
+    <!-- RATES -->
+    <div id="rates" class="tab-content">
+      <h2 class="section-title">Rates & Booking Conditions</h2>
       <ul>
-        <li><strong>Service Stations:</strong> Some accept cards, but carry cash just in case.</li>
-        <li><strong>Shops:</strong> Lüderitz shops close early (after 13:00) on Saturdays, Sundays, and public holidays.</li>
-        <li><strong>Desert Driving:</strong> Slow down for sand dunes blowing across the road on the last 50 km into town!</li>
+        <li><strong>Self-Catering Family Unit:</strong> Sleeps up to 4 guests</li>
+        <li><strong>Standard Double Room:</strong> Sleeps 2 guests</li>
+        <li><strong>Budget Room:</strong> Sleeps 2 guests</li>
       </ul>
-    </div>
-
-    <!-- RATES PAGE -->
-    <div id="rates" class="tab-page">
-      <h2 class="page-title">Rates & Pricing</h2>
-      <ul>
-        <li><strong>Self Catering Family Unit:</strong> Sleeps up to 4</li>
-        <li><strong>Standard Double Room:</strong> Sleeps 2</li>
-        <li><strong>Budget Room:</strong> Sleeps 2</li>
-      </ul>
-      <p>Contact host directly on WhatsApp for live seasonal pricing and specials.</p>
+      <p style="margin-top: 1rem; color: var(--text-muted);">* Seasonal discounts and business group rates are available directly upon WhatsApp inquiry.</p>
+      <a href="https://wa.me/264810000000?text=Hi%20Margaret,%20please%20send%20current%20rates." class="btn-whatsapp">Request Live Rates</a>
     </div>
 
   </div>
 
   <script>
-    function switchTab(tabId, btnElement) {
-      // Hide all pages
-      const pages = document.querySelectorAll('.tab-page');
-      pages.forEach(page => page.classList.remove('active'));
-
-      // Remove active status from buttons
-      const buttons = document.querySelectorAll('.nav-btn');
-      buttons.forEach(btn => btn.classList.remove('active'));
-
-      // Show targeted page and set button active
+    function openTab(tabId, el) {
+      document.querySelectorAll('.tab-content').forEach(tab => tab.classList.remove('active'));
+      document.querySelectorAll('.nav-tab').forEach(btn => btn.classList.remove('active'));
       document.getElementById(tabId).classList.add('active');
-      btnElement.classList.add('active');
+      el.classList.add('active');
     }
   </script>
 
