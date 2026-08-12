@@ -9,180 +9,130 @@
       box-sizing: border-box;
       margin: 0;
       padding: 0;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
     }
 
     body {
-      background-color: #0d2870;
+      background-color: #3b597c; /* Original site dark blue */
       color: #ffffff;
-      line-height: 1.6;
-      padding-bottom: 3rem;
+      font-family: Georgia, "Times New Roman", Times, serif;
+      text-align: center;
+      padding: 1rem;
     }
 
+    /* Main Title & Seal Header */
     header {
-      text-align: center;
-      padding: 2.5rem 1rem 1.5rem 1rem;
+      margin-top: 1rem;
+      margin-bottom: 1.5rem;
     }
 
     header h1 {
-      font-size: 2rem;
-      font-weight: 800;
-      margin-bottom: 0.2rem;
+      font-size: 2.2rem;
+      font-weight: bold;
+      letter-spacing: 1px;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
     }
 
-    header p {
-      color: #93c5fd;
-      font-style: italic;
-      font-size: 0.95rem;
+    /* Navigation Links Styling (Matching Original Top Bar) */
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 8px 12px;
+      max-width: 650px;
+      margin: 0 auto 1.5rem auto;
+      padding: 10px;
+    }
+
+    nav a {
+      color: #ffffff;
+      text-decoration: none;
+      font-size: 0.75rem;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+      color: #d1e5ff;
+    }
+
+    /* Action Buttons (Original Dark Grey Style) */
+    .btn-dark {
+      display: inline-block;
+      background-color: #333333;
+      color: #ffffff;
+      padding: 8px 20px;
+      font-size: 0.85rem;
+      text-decoration: none;
+      font-family: Arial, sans-serif;
+      border: 1px solid #555555;
+      margin: 10px 0;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+    }
+
+    /* Original White Border Frame around Images */
+    .framed-img {
+      border: 4px solid #ffffff;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+      max-width: 90%;
+      height: auto;
+      margin: 15px auto;
+      display: block;
     }
 
     .container {
-      max-width: 500px;
+      max-width: 600px;
       margin: 0 auto;
-      padding: 0 1.2rem;
+      text-align: left;
     }
 
-    .hero-img {
-      width: 100%;
-      height: 250px;
-      object-fit: cover;
-      border-radius: 12px;
-      border: 2px solid #3b82f6;
-      margin-bottom: 1.5rem;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.3);
-    }
-
-    .btn-whatsapp {
-      display: block;
-      width: 100%;
-      background-color: #10b981;
-      color: #ffffff;
-      text-align: center;
-      padding: 0.9rem;
-      border-radius: 25px;
-      text-decoration: none;
-      font-weight: 700;
-      font-size: 1.05rem;
-      margin-bottom: 1.5rem;
-      box-shadow: 0 4px 12px rgba(16, 185, 129, 0.4);
-    }
-
-    .quote-card {
-      background-color: #1e3a8a;
-      border-left: 4px solid #3b82f6;
-      padding: 1rem 1.2rem;
-      border-radius: 8px;
-      margin-bottom: 1.5rem;
-      font-style: italic;
-      color: #e0e7ff;
-    }
-
-    .about-text {
-      margin-bottom: 1.5rem;
-      font-size: 0.95rem;
-      color: #f1f5f9;
-    }
-
-    .objective-box {
-      background-color: #11224d;
-      padding: 1.2rem;
-      border-radius: 10px;
-      margin-bottom: 1.5rem;
-    }
-
-    .objective-box h3 {
-      color: #60a5fa;
-      font-size: 0.9rem;
-      letter-spacing: 1px;
-      margin-bottom: 0.5rem;
-    }
-
-    .badge-no-pets {
-      display: inline-block;
-      background-color: #ef4444;
-      color: white;
-      padding: 0.4rem 1.2rem;
-      border-radius: 20px;
-      font-size: 0.8rem;
-      font-weight: 700;
-      margin: 0 auto 2rem auto;
-      text-align: center;
-    }
-
-    .center-wrapper {
-      text-align: center;
-    }
-
-    .section-title {
-      text-align: center;
-      font-size: 1.3rem;
-      margin-bottom: 1.2rem;
-      color: #93c5fd;
-    }
-
-    /* 3x3 Grid Layout for Navigation Categories */
-    .nav-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 0.8rem;
+    /* Section Content Styles */
+    .content-block {
       margin-bottom: 2.5rem;
+      padding-top: 1rem;
+      border-top: 1px solid rgba(255,255,255,0.3);
     }
 
-    .grid-btn {
-      background-color: #1e3a8a;
-      border: 1px solid #2563eb;
-      color: #ffffff;
-      padding: 0.9rem 0.4rem;
-      border-radius: 8px;
-      text-decoration: none;
+    .content-block h2 {
       text-align: center;
-      font-size: 0.8rem;
-      font-weight: 600;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      min-height: 55px;
+      font-size: 1.4rem;
+      margin-bottom: 1rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: #ffffff;
     }
 
-    .grid-btn:hover, .grid-btn:active {
-      background-color: #2563eb;
-    }
-
-    .content-section {
-      background-color: #11224d;
-      padding: 1.5rem;
-      border-radius: 10px;
-      margin-top: 1.2rem;
-      scroll-margin-top: 20px;
-    }
-
-    .content-section h2 {
-      font-size: 1.2rem;
-      color: #60a5fa;
-      margin-bottom: 0.8rem;
-    }
-
-    .content-section p, .content-section ul {
+    .content-block p {
       font-size: 0.9rem;
-      color: #cbd5e1;
+      line-height: 1.5;
+      margin-bottom: 10px;
     }
 
-    .content-section ul {
-      margin-left: 1.2rem;
+    /* Standard White Bullet List Style from Original Site */
+    .content-block ul {
+      margin-left: 20px;
+      font-size: 0.85rem;
+      line-height: 1.6;
     }
 
-    .gallery-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 0.5rem;
-      margin-top: 1rem;
+    .content-block ul li {
+      margin-bottom: 4px;
     }
 
-    .gallery-grid img {
-      width: 100%;
-      height: 100px;
-      object-fit: cover;
-      border-radius: 6px;
+    .sub-title {
+      font-weight: bold;
+      text-decoration: underline;
+      margin-top: 10px;
+      display: block;
+    }
+
+    /* Divider Lines */
+    hr {
+      border: 0;
+      height: 1px;
+      background: rgba(255,255,255,0.4);
+      margin: 20px 0;
     }
   </style>
 </head>
@@ -190,106 +140,136 @@
 
   <header>
     <h1>Villelodge Accommodation</h1>
-    <p>111 Werft Street, Burenkamp, Lüderitz</p>
   </header>
 
+  <!-- Top Navigation matching original links -->
+  <nav>
+    <a href="#home">HOME</a> |
+    <a href="#family">FAMILY UNIT</a> |
+    <a href="#standard">STANDARD ROOM</a> |
+    <a href="#budget">BUDGET ACCOMMODATION</a> |
+    <a href="#gallery">GALLERY</a> |
+    <a href="#bookings">AVAILABILITY AND BOOKINGS</a> |
+    <a href="#awards">AWARDS AND COMMENTS</a> |
+    <a href="#tourist">TOURIST ATTRACTIONS</a> |
+    <a href="#visitor-info">WHAT EVERY VISITOR SHOULD KNOW</a> |
+    <a href="#rates">RATES</a>
+  </nav>
+
   <div class="container">
-    <img src="https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=800&q=80" alt="Villelodge Room" class="hero-img">
 
-    <a href="https://wa.me/264810000000?text=Hi%20Margaret,%20I%20would%20like%20to%20inquire%20about%20booking%20a%20room%20at%20Villelodge." class="btn-whatsapp">💬 Book Now via WhatsApp</a>
-
-    <div class="quote-card">
-      "Located behind an unassuming exterior lies a hidden gem..." — Guest Review
+    <div style="text-align: center;">
+      <a href="https://wa.me/264810000000" class="btn-dark">Book Now</a>
     </div>
 
-    <div class="about-text">
-      <strong>Villelodge Accommodation</strong> offers clean, peaceful, and very affordable self-catering rooms. The owner, <strong>Margaret de Villiers</strong>, gives personal attention to visitors and goes above and beyond to make guests feel at home.
+    <!-- Family Unit Section -->
+    <div id="family" class="content-block">
+      <img src="https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=600&q=80" class="framed-img" alt="Family Unit">
+      
+      <p>The <strong>family unit</strong> is a <strong>very comfortable</strong> and <strong>well equipped</strong> unit with:</p>
+      <ul>
+        <li>Fully self-catering kitchen - sink, stove top, microwave oven, fridge, kettle, cutlery and crockery.</li>
+        <li>Bedroom with twin beds.</li>
+        <li>Double bed in the open-plan lounge / kitchen - ideal for adults to watch late night movies with kids peaceful sleeping in the bedroom.</li>
+        <li>Ensuite Bathroom</li>
+        <li>Satellite TV</li>
+        <li>Quality pillows, linen and towels</li>
+        <li>Fan</li>
+        <li>Hair dryer</li>
+        <li>Safe for valuables inside bedroom</li>
+        <li>Wi-Fi</li>
+        <li>Safe parking</li>
+      </ul>
     </div>
 
-    <div class="objective-box">
-      <h3>OUR MAIN OBJECTIVE</h3>
-      <p>We are Christians that value Biblical standards and aim to uphold morality in an environment where guests can relax, while creating pleasant memories and enjoying their down-time.</p>
-    </div>
-
-    <div class="center-wrapper">
-      <div class="badge-no-pets">🐾 NO PETS ALLOWED</div>
-    </div>
-
-    <h2 class="section-title">Explore Categories</h2>
-
-    <!-- Complete Categories Grid -->
-    <div class="nav-grid">
-      <a href="#family" class="grid-btn">Family Unit</a>
-      <a href="#standard" class="grid-btn">Standard Room</a>
-      <a href="#budget" class="grid-btn">Budget Accom.</a>
-      <a href="#gallery" class="grid-btn">Gallery</a>
-      <a href="#bookings" class="grid-btn">Availability & Bookings</a>
-      <a href="#awards" class="grid-btn">Awards & Comments</a>
-      <a href="#tourist" class="grid-btn">Tourist Attractions</a>
-      <a href="#visitor-info" class="grid-btn">Visitor Info</a>
-      <a href="#rates" class="grid-btn">Rates</a>
-    </div>
-
-    <!-- Sections for Each Category -->
-    <div id="family" class="content-section">
-      <h2>Family Unit</h2>
-      <p>Self-catering unit equipped with full kitchen (sink, stove top, microwave, fridge, kettle, crockery), bedroom with twin beds, double bed in open-plan lounge, en-suite bathroom, satellite TV, and Wi-Fi.</p>
-    </div>
-
-    <div id="standard" class="content-section">
+    <!-- Standard Room Section -->
+    <div id="standard" class="content-block">
       <h2>Standard Room</h2>
-      <p>Double room with choice of two single or kingsize bed, en-suite bathroom, satellite TV, fridge, microwave, kettle, fan, and access to shared communal kitchen.</p>
+      <img src="https://images.unsplash.com/photo-1566665797739-1674de7a421a?auto=format&fit=crop&w=600&q=80" class="framed-img" alt="Standard Room">
+      
+      <p>Our <strong>Double Room</strong> is comfortable with a choice of two single or a kingsize bed, en suite bathroom and <strong>breakfast corner</strong> equipped with a:</p>
+      <ul>
+        <li>Fridge</li>
+        <li>Microwave oven</li>
+        <li>Toaster</li>
+        <li>Kettle</li>
+        <li>Cutlery & crockery</li>
+      </ul>
+      <p>We have a fully equipped communal kitchen on the premises - shared by two rooms.</p>
+      <p>Inside the room you will also find a safe for your valuables, DSTV (Hotel Bouquet), access to free Wi-Fi, a fan and a hairdryer.</p>
     </div>
 
-    <div id="budget" class="content-section">
+    <!-- Budget Accommodation Section -->
+    <div id="budget" class="content-block">
       <h2>Budget Accommodation</h2>
-      <p>Overnight room with double bed, fold-down table, en-suite bathroom, coffee station, counter fridge, and satellite TV. Ideal for business travelers and campers.</p>
+      <img src="https://images.unsplash.com/photo-1595526114035-0d45ed16cfbf?auto=format&fit=crop&w=600&q=80" class="framed-img" alt="Budget Room">
+      
+      <p>If you are willing to forgo a little space in lieu of a low price, the <strong>overnight room</strong> with its comfortable double bed and fold down table / desk is the room for you. It is very popular with travelling business people and campers.</p>
+
+      <span class="sub-title">BUDGET FRIENDLY</span>
+      <p>It has an en suite bathroom, Satellite TV, access to free Wi-Fi, fan, hair dryer, coffee station & counter top fridge.</p>
+      <p>A fully equipped communal kitchen is 15 meters from the door with a fridge, stove, microwave oven and sink.</p>
+      <ul>
+        <li>Quality pillows, linen and towels.</li>
+        <li>Safe parking.</li>
+      </ul>
     </div>
 
-    <div id="gallery" class="content-section">
-      <h2>Gallery</h2>
-      <p>Explore our clean, comfortable rooms and premises.</p>
-      <div class="gallery-grid">
-        <img src="https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=400&q=80" alt="Room 1">
-        <img src="https://images.unsplash.com/photo-1566665797739-1674de7a421a?auto=format&fit=crop&w=400&q=80" alt="Room 2">
-      </div>
-    </div>
-
-    <div id="bookings" class="content-section">
-      <h2>Availability & Bookings</h2>
-      <p>Check online availability or send a direct WhatsApp message to secure your booking instantly.</p>
-    </div>
-
-    <div id="awards" class="content-section">
+    <!-- Awards Section -->
+    <div id="awards" class="content-block">
       <h2>Awards & Comments</h2>
+      <p><strong>Tripadvisor Ranking:</strong> #4 of 20 B&Bs in Lüderitz</p>
       <ul>
-        <li>Rated 8.9 / 10 - Fabulous</li>
-        <li>TripAdvisor #4 of 20 B&Bs in Lüderitz</li>
-        <li>SleepingOut Best Establishment Award Winner</li>
+        <li>"You will be pleasantly surprised"</li>
+        <li>"Impeccable apartment with everything you need"</li>
+        <li>"Friendliest staff in town"</li>
+        <li>"Perfect place to stay in Lüderitz"</li>
+      </ul>
+      <hr>
+      <p><strong>SleepingOUT Awards:</strong></p>
+      <ul>
+        <li>Best Establishment Award Winner</li>
+        <li>Best Value For Money Award Winner</li>
       </ul>
     </div>
 
-    <div id="tourist" class="content-section">
-      <h2>Tourist Attractions</h2>
-      <ul>
-        <li>Kolmanskop Ghost Town</li>
-        <li>Diaz Point & Lighthouse</li>
-        <li>Bogenfels Arch</li>
-        <li>Penguin Catamaran Tours</li>
-      </ul>
+    <!-- Tourist Attractions Section -->
+    <div id="tourist" class="content-block">
+      <h2>What To Do In Lüderitz</h2>
+      
+      <span class="sub-title">KOLMANSKOP</span>
+      <p>The old ghost town is buzzing with activity. Daily guided tours at 09H30 and 11H00 Mon - Sat.</p>
+      
+      <span class="sub-title">DIAZ POINT</span>
+      <p>A drive around the peninsula will bring you to Diaz Point with the Diaz Cross, Light House and Coffee Shop.</p>
+
+      <span class="sub-title">BOGENFELS ARCH</span>
+      <p>Visit the Bogenfels Arch in the heart of the forbidden territory (Sperrgebiet).</p>
     </div>
 
-    <div id="visitor-info" class="content-section">
+    <!-- Visitor Info Section -->
+    <div id="visitor-info" class="content-block">
       <h2>What Every Visitor Should Know</h2>
-      <p>Important travel tips for Lüderitz: Fuel stations accept cash/card, shops close after 13:00 on weekends, and watch out for sand dunes driving in from Aux!</p>
+      <ul>
+        <li><strong>Service Stations:</strong> Some accept cards, but carry cash just to be prepared.</li>
+        <li><strong>Currency:</strong> Namibian Dollar and South African Rand are accepted at equal value.</li>
+        <li><strong>Shops:</strong> Lüderitz is a small town and most shops close after 13:00 on Saturdays, Sundays, and Public Holidays.</li>
+        <li><strong>Driving:</strong> Slow down when approaching sand dunes across the road in the last 50 km to prevent vehicle damage!</li>
+      </ul>
     </div>
 
-    <div id="rates" class="content-section">
+    <!-- Rates Section -->
+    <div id="rates" class="content-block">
       <h2>Rates</h2>
-      <p>Affordable rates across Family, Standard, and Budget units. Contact us via WhatsApp for current seasonal pricing.</p>
+      <p><strong>SELF CATERING FAMILY UNIT</strong> - Sleeps 4</p>
+      <p><strong>SELF CATERING STANDARD DOUBLE ROOM</strong> - Sleeps 2</p>
+      <p><strong>SELF CATERING BUDGET ROOM</strong> - Sleeps 2</p>
+      <br>
+      <p><em>Please contact us via WhatsApp for direct bookings and updated seasonal rates.</em></p>
     </div>
 
   </div>
 
 </body>
 </html>
+
